@@ -29,7 +29,7 @@ An open-source tool that fetches your tweets from X (formerly Twitter) and syncs
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ashemag/x-strategy-os.git
    cd x-strategy-os
    ```
 
@@ -81,14 +81,21 @@ See `.env.example` for all required environment variables:
 
 ## Deployment
 
-This app can be deployed to various cloud platforms:
-- Fly.io
+See [DEPLOY.md](DEPLOY.md) for detailed deployment instructions.
+
+### Quick Deploy to Fly.io
+
+1. Install Fly CLI: `brew install flyctl` (or see [DEPLOY.md](DEPLOY.md) for other OS)
+2. Login: `flyctl auth login`
+3. Launch: `flyctl launch`
+4. Set secrets: `flyctl secrets set TWITTER_API_KEY="..." ...` (see [DEPLOY.md](DEPLOY.md))
+5. Deploy: `flyctl deploy`
+
+The app includes configuration for easy deployment on:
+- **Fly.io** (recommended) - Dockerfile and fly.toml.example included
 - Heroku
 - Google Cloud Run
 - AWS Lambda
-- Any platform that supports Python Flask apps
-
-For deployment instructions, create platform-specific configuration files as needed.
 
 ## Contributing
 

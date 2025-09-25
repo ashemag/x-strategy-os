@@ -54,7 +54,6 @@ htmlcov/
 
 # Deployment
 fly.toml
-Dockerfile
 .dockerignore
 *.pem
 *.key
